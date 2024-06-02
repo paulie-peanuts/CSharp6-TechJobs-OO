@@ -18,6 +18,10 @@ namespace TechJobsOOAutoGraded6
         public CoreCompetency(string v) : this()
         {
             Value = v;
+            if (Value == "")
+            {
+                Value = "Data not available";
+            }
         }
 
         public override bool Equals(object obj)

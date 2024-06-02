@@ -16,6 +16,10 @@ namespace TechJobsOOAutoGraded6
         public Employer(string value) : this()
         {
             Value = value;
+            if (Value == "")
+            {
+                Value = "Data not available";
+            }
         }
 
         public override bool Equals(object obj)
