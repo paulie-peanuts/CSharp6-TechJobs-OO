@@ -18,7 +18,13 @@ namespace TechJobsOOAutoGraded6
             nextId++;
         }
 
-        public Job(string name, Employer employerName, Location employerLocation, PositionType jobType, CoreCompetency jobCoreCompetency)
+        public Job(
+            string name,
+            Employer employerName,
+            Location employerLocation,
+            PositionType jobType,
+            CoreCompetency jobCoreCompetency
+        )
             : this()
         {
             Name = name;
@@ -26,16 +32,11 @@ namespace TechJobsOOAutoGraded6
             EmployerLocation = employerLocation;
             JobType = jobType;
             JobCoreCompetency = jobCoreCompetency;
-            // if (EmployerName.ToString() = "")
-            // {
-
-            // }
         }
 
         public override bool Equals(object obj)
         {
-            return obj is Job job &&
-                   Id == job.Id;
+            return obj is Job job && Id == job.Id;
         }
 
         public override int GetHashCode()
@@ -50,14 +51,25 @@ namespace TechJobsOOAutoGraded6
             {
                 Name = "Data not available";
             }
-            return nl + "ID: " + Id + nl + "Name: " + Name + nl + "Employer: " + EmployerName + nl + "Location: " + EmployerLocation + nl + "Position Type: " + JobType + nl + "Core Competency: " + JobCoreCompetency + nl;
+            return nl
+                + "ID: "
+                + Id
+                + nl
+                + "Name: "
+                + Name
+                + nl
+                + "Employer: "
+                + EmployerName
+                + nl
+                + "Location: "
+                + EmployerLocation
+                + nl
+                + "Position Type: "
+                + JobType
+                + nl
+                + "Core Competency: "
+                + JobCoreCompetency
+                + nl;
         }
-        // TODO: Task 3: Add the two necessary constructors.
-
-        // TODO: Task 3: Generate Equals() and GetHashCode() methods.
-
-        // TODO: Task 5: Generate custom ToString() method.
-        //Until you create this method, you will not be able to print a job to the console.
-
     }
 }

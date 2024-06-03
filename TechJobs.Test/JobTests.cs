@@ -66,9 +66,7 @@ namespace TechJobs.Tests
         public void TestToStringStartsAndEndsWithNewLine()
         {
             string message = "The custom ToString() begins and ends with a new line";
-            // Assert.AreEqual(job1.ToString()[0], char.Parse(Environment.NewLine), message);
             Assert.AreEqual(char.Parse(Environment.NewLine), job1.ToString()[0], message);
-            // Assert.AreEqual(job1.ToString()[^1], char.Parse(Environment.NewLine), message);
             Assert.AreEqual(char.Parse(Environment.NewLine), job1.ToString()[^1], message);
         }
 
@@ -93,12 +91,7 @@ namespace TechJobs.Tests
         {
             string none = "Data not available";
             string message = "If a field is left empty, " + none + " message appears";
-            Assert.AreEqual(none, job5.EmployerName.ToString(), message + job5.EmployerName.ToString());
+            Assert.AreEqual(none, job5.EmployerName.ToString(), message);
         }
-        /*[TestMethod]
-        public void TestMethod()
-        {
-            //TODO: Task 4: remove this method before you create your first test method
-        }*/
     }
 }
