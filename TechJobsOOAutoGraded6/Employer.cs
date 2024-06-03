@@ -1,42 +1,10 @@
 ﻿using System;
+
 namespace TechJobsOOAutoGraded6
 {
-	public class Employer
-	{
-        public int Id { get; }
-        private static int nextId = 1;
-        public string Value { get; set; }
-
-        public Employer()
-        {
-            Id = nextId;
-            nextId++;
-        }
-
-        public Employer(string value) : this()
-        {
-            Value = value;
-            if (Value == "")
-            {
-                Value = "Data not available";
-            }
-        }
-
-        public override bool Equals(object obj)
-        {
-            return obj is Employer employer &&
-                   Id == employer.Id;
-        }
-
-        public override int GetHashCode()
-        {
-            return HashCode.Combine(Id);
-        }
-
-        public override string ToString()
-        {
-            return Value;
-        }
+    public class Employer : JobField
+    {
+        public Employer(string value)
+            : base(value) { }
     }
 }
-

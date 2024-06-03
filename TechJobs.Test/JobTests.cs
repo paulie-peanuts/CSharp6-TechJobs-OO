@@ -77,7 +77,7 @@ namespace TechJobs.Tests
         {
             string nl = Environment.NewLine;
             string message = " is formatted correctly inside ToString()";
-            string output = nl + "ID: 23" + nl + "Name: Product tester" + nl + "Employer: ACME" + nl + "Location: Desert" + nl + "Position Type: Quality control" + nl + "Core Competency: Persistence" + nl;
+            string output = nl + "ID: " + job3.Id + nl + "Name: Product tester" + nl + "Employer: ACME" + nl + "Location: Desert" + nl + "Position Type: Quality control" + nl + "Core Competency: Persistence" + nl;
 
             StringAssert.Contains(job3.ToString(), "ID: 23", "ID" + message);
             StringAssert.Contains(job3.ToString(), "Name: Product tester", "Name" + message);
